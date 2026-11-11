@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoLife | Sustainable Living Blog</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2>Eco<span>Life.</span></h2>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#blogs">Blogs</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+
+        <button onclick="openForm()">
+            + Add Article
+        </button>
+
+    </header>
+
+
+    <section class="hero" id="home">
+
+        <div>
+
+            <p class="tag">LIVE GREEN. THINK GREEN.</p>
+
+            <h1>
+                Small Changes.<br>
+                <span>Greener Future.</span>
+            </h1>
+
+            <p>
+                Discover simple ways to live sustainably
+                and protect our beautiful planet.
+            </p>
+
+            <a href="#blogs" class="btn">
+                Explore Articles →
+            </a>
+
+        </div>
+
+        <div class="hero-icon">
+            🌿
+        </div>
+
+    </section>
+
+
+    <section id="blogs">
+
+        <h2>Explore Sustainable Living</h2>
+
+        <p>Discover ideas for a better and greener world.</p>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search articles..."
+            oninput="displayArticles()"
+        >
+
+        <div class="filters">
+
+            <button onclick="filter('All')">All</button>
+
+            <button onclick="filter('Gardening')">Gardening</button>
+
+            <button onclick="filter('Waste Management')">
+                Waste
+            </button>
+
+            <button onclick="filter('Energy')">Energy</button>
+
+            <button onclick="filter('Lifestyle')">Lifestyle</button>
+
+        </div>
+
+
+        <div id="grid" class="grid">
+            Loading articles...
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2>About EcoLife</h2>
+
+        <p>
+            EcoLife is a sustainable living blog that
+            promotes environmental awareness.
+
+            Our mission is to inspire people to reduce waste,
+            conserve natural resources and adopt eco-friendly
+            habits for a greener future.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 EcoLife | Sustainable Living Blog</p>
+
+        <p>Care for Nature. Live Sustainably.</p>
+
+    </footer>
+
+
+    <!-- Add / Edit Article Form -->
+
+    <div id="modal" class="modal">
+
+        <form id="form">
+
+            <button
+                type="button"
+                class="close"
+                onclick="closeForm()"
+            >
+                ×
+            </button>
+
+            <h2 id="formTitle">Add Article</h2>
+
+            <input type="hidden" id="id">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Article title"
+                required
+            >
+
+            <select id="category" required>
+
+                <option value="">Select Category</option>
+
+                <option>Gardening</option>
+
+                <option>Waste Management</option>
+
+                <option>Energy</option>
+
+                <option>Lifestyle</option>
+
+            </select>
+
+            <textarea
+                id="description"
+                placeholder="Article description"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Save Article
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
